@@ -5,6 +5,7 @@ import { computed, onMounted, onUnmounted, ref } from 'vue';
 
 const showNavbar = ref(false)
 const scrollThreshold = ref(0)
+const showMenu = ref(false)
 
 
 const navbarClass = computed(() => {
@@ -19,6 +20,14 @@ const navbarInnerClass = computed(() => {
         'py-4': showNavbar.value,
     }
 })
+
+const mouseOvered = () => {
+    showMenu.value = true
+}
+
+const mouseOuted = () => {
+    showMenu.value = false
+}
 
 
 const toggleNavbar = () => {
@@ -41,8 +50,9 @@ onUnmounted(() => {
         <div class="flex justify-between py-10 " :class="navbarInnerClass">
             <div class="content-color">abco</div>
             <div class="flex gap-3">
-                <div>
-                    menu one
+                <div class="relative">
+                    <div @mouseover="mouseOvered()" @mouseout="mouseOuted()">menu one</div>
+                    <CardMenuItem1 v-if="showMenu"></CardMenuItem1>
                 </div>
                 <div>
                     menu two
@@ -59,8 +69,9 @@ onUnmounted(() => {
                 <div>
                     menu six
                 </div>
-                <div>
-                    menu seven
+                <div class="relative">
+                    <div @mouseover="mouseOvered()" @mouseout="mouseOuted()">menu seven</div>
+                    <CardMenuItem v-if="showMenu"></CardMenuItem>
                 </div>
 
             </div>
