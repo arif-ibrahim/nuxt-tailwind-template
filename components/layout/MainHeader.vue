@@ -52,16 +52,20 @@ onUnmounted(() => {
             <div class="content-color">abco</div>
             <div class="flex gap-3">
                 <div class="relative">
-                    <div class="inline-block cursor-pointer border-2   border-red-500"
-                        @mouseover="showElement(headerMenu.HOME)">{{ headerMenu.HOME }}</div>
-                    <CardMenuItem1 @mouseleave="hideElement()" v-if="showMenu === headerMenu.HOME">
+                    <div @mouseover="showElement(headerMenu.HOME)" @mouseleave="hideElement()" >
+                        <div class=" cursor-pointer border-2   border-red-500"
+                        >{{ headerMenu.HOME }}</div>
+                    <CardMenuItem1 v-if="showMenu === headerMenu.HOME">
                     </CardMenuItem1>
+                    </div>
                 </div>
                 <div class="relative">
-                    <div class="inline-block cursor-pointer border-2   border-red-500"
-                        @mouseover="showElement(headerMenu.ABOUT)">{{ headerMenu.ABOUT }}</div>
-                    <CardMenuItem @mouseleave="hideElement()" v-if="showMenu === headerMenu.ABOUT">
+                   <div @mouseover="showElement(headerMenu.ABOUT)" @mouseleave="hideElement()">
+                    <div class=" cursor-pointer border-2   border-red-500"
+                        >{{ headerMenu.ABOUT }}</div>
+                    <CardMenuItem  v-if="showMenu === headerMenu.ABOUT">
                     </CardMenuItem>
+                   </div>
                 </div>
 
             </div>
