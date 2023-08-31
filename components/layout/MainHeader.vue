@@ -1,11 +1,12 @@
 
 <script setup lang="ts">
+import { headerMenu } from '@/constant/header';
 import { computed, onMounted, onUnmounted, ref } from 'vue';
 
 
 const showNavbar = ref(false)
 const scrollThreshold = ref(0)
-const showMenu = ref(false)
+const showMenu = ref('')
 
 
 const navbarClass = computed(() => {
@@ -21,12 +22,12 @@ const navbarInnerClass = computed(() => {
     }
 })
 
-const mouseOvered = () => {
-    showMenu.value = true
+const showElement = (menu: string) => {
+    showMenu.value = menu
 }
 
-const mouseOuted = () => {
-    showMenu.value = false
+const hideElement = () => {
+    showMenu.value = ''
 }
 
 
@@ -51,27 +52,16 @@ onUnmounted(() => {
             <div class="content-color">abco</div>
             <div class="flex gap-3">
                 <div class="relative">
-                    <div @mouseover="mouseOvered()" @mouseout="mouseOuted()">menu one</div>
-                    <CardMenuItem1 v-if="showMenu"></CardMenuItem1>
-                </div>
-                <div>
-                    menu two
-                </div>
-                <div>
-                    menu three
-                </div>
-                <div>
-                    menu four
-                </div>
-                <div>
-                    menu five
-                </div>
-                <div>
-                    menu six
+                    <div class="inline-block cursor-pointer border-2   border-red-500"
+                        @mouseover="showElement(headerMenu.HOME)">{{ headerMenu.HOME }}</div>
+                    <CardMenuItem1 @mouseleave="hideElement()" v-if="showMenu === headerMenu.HOME">
+                    </CardMenuItem1>
                 </div>
                 <div class="relative">
-                    <div @mouseover="mouseOvered()" @mouseout="mouseOuted()">menu seven</div>
-                    <CardMenuItem v-if="showMenu"></CardMenuItem>
+                    <div class="inline-block cursor-pointer border-2   border-red-500"
+                        @mouseover="showElement(headerMenu.ABOUT)">{{ headerMenu.ABOUT }}</div>
+                    <CardMenuItem @mouseleave="hideElement()" v-if="showMenu === headerMenu.ABOUT">
+                    </CardMenuItem>
                 </div>
 
             </div>
