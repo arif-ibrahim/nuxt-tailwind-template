@@ -92,6 +92,7 @@ onUnmounted(() => {
             </div>
         </div>
     </div>
-    <SideDrawer v-if="isOpenCartDrawer" @close-overlay="closeCartDrawer"></SideDrawer>
+        <SideDrawer v-if="isOpenCartDrawer" @close-overlay="closeCartDrawer"></SideDrawer>
 
 </template>
+ 
