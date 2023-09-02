@@ -7,6 +7,7 @@ import { computed, onMounted, onUnmounted, ref } from 'vue';
 const showNavbar = ref(false)
 const scrollThreshold = ref(0)
 const showMenu = ref('')
+const isOpenCartDrawer = ref(false)
 
 
 const navbarClass = computed(() => {
@@ -16,11 +17,26 @@ const navbarClass = computed(() => {
     }
 })
 
-const navbarInnerClass = computed(() => {
-    return {
-        'h-12': showNavbar.value,
+const disableScroll = () => {
+      document.body.style.overflow = "hidden";
     }
-})
+const enableScroll = () => {
+      document.body.style.overflow = "auto";
+    }
+
+const openCartDrawer = () => {
+    disableScroll()
+    isOpenCartDrawer.value = true
+}
+
+const closeCartDrawer = () => {
+    enableScroll()
+    isOpenCartDrawer.value = false
+}
+
+const getInnerClass = () => {
+    return showNavbar.value ? 'h-12' : 'h-20'
+}
 
 const showElement = (menu: string) => {
     showMenu.value = menu
@@ -47,8 +63,8 @@ onUnmounted(() => {
 })
 </script>
 <template>
-    <div class="bg-indigo-300 border-b-2 main-site-padding mb-5  w-full" :class="navbarClass">
-        <div class="flex justify-between h-20 items-center" :class="navbarInnerClass">
+    <div class=" bg-indigo-300 border-b-2 main-site-padding mb-5  w-full" :class="navbarClass">
+        <div class="flex justify-between items-center" :class="getInnerClass()">
 
             <div class="content-color ">abco</div>
 
@@ -67,15 +83,15 @@ onUnmounted(() => {
                         <CardMenuItem v-if="showMenu === headerMenu.ABOUT">
                         </CardMenuItem>
                     </div>
+                     
 
             </div>
 
             <div class="flex">
-                <div>icon1</div>
-                <div>icon2</div>
-                <div>icon3</div>
+                <div @click="openCartDrawer" class="cursor-pointer">icon1</div>
             </div>
-
         </div>
     </div>
+    <SideDrawer v-if="isOpenCartDrawer" @close-overlay="closeCartDrawer"></SideDrawer>
+
 </template>
