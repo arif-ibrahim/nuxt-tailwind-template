@@ -72,14 +72,18 @@ onUnmounted(() => {
 
                 <div class="h-full" @mouseover="showElement(headerMenu.HOME)" @mouseleave="hideElement()">
                     <div class=" flex items-center cursor-pointer  h-full">{{ headerMenu.HOME }}</div>
-                    <CardMenuItem1 v-if="showMenu === headerMenu.HOME">
-                    </CardMenuItem1>
+                    <Transition name="menuItem">
+                        <CardMenuItem1 v-if="showMenu === headerMenu.HOME">
+                        </CardMenuItem1>
+                    </Transition>
                 </div>
 
                 <div class="h-full" @mouseover="showElement(headerMenu.ABOUT)" @mouseleave="hideElement()">
                     <div class=" flex items-center cursor-pointer   border-red-500 h-full">{{ headerMenu.ABOUT }}</div>
-                    <CardMenuItem v-if="showMenu === headerMenu.ABOUT">
-                    </CardMenuItem>
+                    <Transition name="menuItem">
+                        <CardMenuItem v-if="showMenu === headerMenu.ABOUT">
+                        </CardMenuItem>
+                    </Transition>
                 </div>
 
 
@@ -109,6 +113,20 @@ onUnmounted(() => {
 .v-leave-to {
     opacity: 0;
     transform: translateX(500px);
+}
+
+
+.menuItem-enter-active {
+    transition: all .3s ease-out;
+}
+
+.menuItem-leave-active {
+    transition: all .2s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.menuItem-enter-from,
+.menuItem-leave-to {
+    opacity: 0;
 }
 </style>
  
