@@ -96,10 +96,13 @@ onUnmounted(() => {
 </template>
 
 
-<style>
-.v-enter-active,
+<style  scoped>
+.v-enter-active {
+    transition: all .3s ease-out;
+}
+
 .v-leave-active {
-    transition: all 0.3s cubic-bezier(1, 0.5, 0.8, 1);
+    transition: all 0.1s cubic-bezier(1, 0.5, 0.8, 1);
 }
 
 .v-enter-from,
