@@ -18,11 +18,11 @@ const navbarClass = computed(() => {
 })
 
 const disableScroll = () => {
-      document.body.style.overflow = "hidden";
-    }
+    document.body.style.overflow = "hidden";
+}
 const enableScroll = () => {
-      document.body.style.overflow = "auto";
-    }
+    document.body.style.overflow = "auto";
+}
 
 const openCartDrawer = () => {
     disableScroll()
@@ -63,27 +63,25 @@ onUnmounted(() => {
 })
 </script>
 <template>
-    <div class=" bg-indigo-300 border-b-2 main-site-padding mb-5  w-full" :class="navbarClass">
+    <div class=" bg-indigo-100 border-b-2 main-site-padding mb-5  w-full" :class="navbarClass">
         <div class="flex justify-between items-center" :class="getInnerClass()">
 
             <div class="content-color ">abco</div>
 
             <div class="flex gap-3 relative h-full">
-              
-                    <div class="h-full" @mouseover="showElement(headerMenu.HOME)" @mouseleave="hideElement()" >
-                        <div class=" flex items-center cursor-pointer  h-full"
-                        >{{ headerMenu.HOME }}</div>
-                        <CardMenuItem1 v-if="showMenu === headerMenu.HOME">
-                        </CardMenuItem1>
-                    </div>
 
-                    <div class="h-full" @mouseover="showElement(headerMenu.ABOUT)" @mouseleave="hideElement()" >
-                        <div class=" flex items-center cursor-pointer   border-red-500 h-full"
-                        >{{ headerMenu.ABOUT }}</div>
-                        <CardMenuItem v-if="showMenu === headerMenu.ABOUT">
-                        </CardMenuItem>
-                    </div>
-                     
+                <div class="h-full" @mouseover="showElement(headerMenu.HOME)" @mouseleave="hideElement()">
+                    <div class=" flex items-center cursor-pointer  h-full">{{ headerMenu.HOME }}</div>
+                    <CardMenuItem1 v-if="showMenu === headerMenu.HOME">
+                    </CardMenuItem1>
+                </div>
+
+                <div class="h-full" @mouseover="showElement(headerMenu.ABOUT)" @mouseleave="hideElement()">
+                    <div class=" flex items-center cursor-pointer   border-red-500 h-full">{{ headerMenu.ABOUT }}</div>
+                    <CardMenuItem v-if="showMenu === headerMenu.ABOUT">
+                    </CardMenuItem>
+                </div>
+
 
             </div>
 
@@ -92,7 +90,6 @@ onUnmounted(() => {
             </div>
         </div>
     </div>
-        <SideDrawer v-if="isOpenCartDrawer" @close-overlay="closeCartDrawer"></SideDrawer>
-
+    <SideDrawer v-if="isOpenCartDrawer" @close-overlay="closeCartDrawer"></SideDrawer>
 </template>
  
