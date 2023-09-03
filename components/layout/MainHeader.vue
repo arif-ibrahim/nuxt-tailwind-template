@@ -78,6 +78,7 @@ onUnmounted(() => {
                     </Transition>
                 </div>
 
+
                 <div class="h-full" @mouseover="showElement(headerMenu.ABOUT)" @mouseleave="hideElement()">
                     <div class=" flex items-center cursor-pointer   border-red-500 h-full">{{ headerMenu.ABOUT }}</div>
                     <Transition name="menuItem">
@@ -85,6 +86,14 @@ onUnmounted(() => {
                         </CardMenuItem>
                     </Transition>
                 </div>
+
+
+                <div class="h-full">
+                    <div class=" flex items-center cursor-pointer   border-red-500 h-full">AAAAAA</div>
+                </div>
+
+
+
 
 
             </div>
@@ -127,6 +136,7 @@ onUnmounted(() => {
 .menuItem-enter-from,
 .menuItem-leave-to {
     opacity: 0;
+    transform: translateY(100px);
 }
 </style>
  
