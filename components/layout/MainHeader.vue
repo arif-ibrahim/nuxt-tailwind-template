@@ -73,7 +73,7 @@ onUnmounted(() => {
                 <div class="h-full" @mouseover="showElement(headerMenu.HOME)" @mouseleave="hideElement()">
                     <div class=" flex items-center cursor-pointer  h-full">{{ headerMenu.HOME }}</div>
                     <Transition name="menuItem">
-                        <CardMenuItem1 v-if="showMenu === headerMenu.HOME">
+                        <CardMenuItem1 v-show="showMenu === headerMenu.HOME">
                         </CardMenuItem1>
                     </Transition>
                 </div>
@@ -82,7 +82,7 @@ onUnmounted(() => {
                 <div class="h-full" @mouseover="showElement(headerMenu.ABOUT)" @mouseleave="hideElement()">
                     <div class=" flex items-center cursor-pointer   border-red-500 h-full">{{ headerMenu.ABOUT }}</div>
                     <Transition name="menuItem">
-                        <CardMenuItem v-if="showMenu === headerMenu.ABOUT">
+                        <CardMenuItem v-show="showMenu === headerMenu.ABOUT">
                         </CardMenuItem>
                     </Transition>
                 </div>
