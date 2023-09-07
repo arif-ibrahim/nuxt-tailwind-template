@@ -14,6 +14,8 @@ const navbarClass = computed(() => {
     return {
         'fixed': showNavbar.value,
         'top-0': showNavbar.value,
+        'backdrop-sepia-0': showNavbar.value,
+        'bg-indigo-100/30': showNavbar.value,
     }
 })
 
@@ -63,7 +65,8 @@ onUnmounted(() => {
 })
 </script>
 <template>
-    <div class=" bg-indigo-100 border-b-2 main-site-padding mb-5  w-full" :class="navbarClass">
+    <div class="transition-all duration-1000   bg-indigo-100 border-b-2 main-site-padding mb-5  w-full"
+        :class="navbarClass">
         <div class="flex justify-between items-center" :class="getInnerClass()">
 
             <div class="content-color ">abco</div>
