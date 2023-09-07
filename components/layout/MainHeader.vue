@@ -6,18 +6,23 @@ import { computed, onMounted, onUnmounted, ref } from 'vue';
 
 const showNavbar = ref(false)
 const scrollThreshold = ref(0)
+const initialThreshold = ref(40)
 const showMenu = ref('')
 const isOpenCartDrawer = ref(false)
+const initialNavState = ref(true)
 
 
 const navbarClass = computed(() => {
     return {
         'fixed': showNavbar.value,
         'top-0': showNavbar.value,
-        'backdrop-sepia-0': showNavbar.value,
         'bg-indigo-100/30': showNavbar.value,
+        'opacity-100': initialNavState.value || showNavbar.value,
+        'translate-y-0': initialNavState.value || showNavbar.value,
     }
 })
+
+
 
 const disableScroll = () => {
     document.body.style.overflow = "hidden";
@@ -50,7 +55,8 @@ const hideElement = () => {
 
 
 const toggleNavbar = () => {
-    showNavbar.value = window.scrollY < scrollThreshold.value && window.scrollY > 40
+    initialNavState.value = window.scrollY <= initialThreshold.value
+    showNavbar.value = window.scrollY < scrollThreshold.value && window.scrollY > initialThreshold.value
     scrollThreshold.value = window.scrollY
 }
 
@@ -65,7 +71,7 @@ onUnmounted(() => {
 })
 </script>
 <template>
-    <div class="transition-all duration-1000   bg-indigo-100 border-b-2 main-site-padding mb-5  w-full"
+    <div class="transition-all duration-1000 opacity-0  -translate-y-11 bg-indigo-100 border-b-2 main-site-padding mb-5  w-full"
         :class="navbarClass">
         <div class="flex justify-between items-center" :class="getInnerClass()">
 
