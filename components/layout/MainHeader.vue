@@ -71,7 +71,7 @@ onUnmounted(() => {
 })
 </script>
 <template>
-    <div class="transition-all duration-1000 opacity-0  -translate-y-11 bg-indigo-100 border-b-2 main-site-padding mb-5  w-full"
+    <div class="transition-all duration-1000 opacity-0  -translate-y-11 bg-indigo-100 border-b-2 main-site-padding  w-full"
         :class="navbarClass">
         <div class="flex justify-between items-center" :class="getInnerClass()">
 
