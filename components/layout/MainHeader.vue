@@ -101,10 +101,6 @@ onUnmounted(() => {
                     <div class=" flex items-center cursor-pointer   border-red-500 h-full">AAAAAA</div>
                 </div>
 
-
-
-
-
             </div>
 
             <div class="flex">
