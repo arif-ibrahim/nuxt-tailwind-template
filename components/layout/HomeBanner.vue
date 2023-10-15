@@ -8,7 +8,7 @@
     <div>
         <Swiper :modules="[SwiperAutoplay, SwiperEffectFade]" :effect="'fade'" :crossFade="true" :slides-per-view="1"
             :loop="true" :autoplay="{
-                delay: 3000,
+                delay: 10000,
                 disableOnInteraction: true,
             }">
 
