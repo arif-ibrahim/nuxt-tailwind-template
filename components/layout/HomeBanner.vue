@@ -72,7 +72,8 @@
 .shopNow {
     transform: scale(1);
     animation-name: shopNow;
-    animation-duration: .5s;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
 }
 
 @keyframes shopNow {
