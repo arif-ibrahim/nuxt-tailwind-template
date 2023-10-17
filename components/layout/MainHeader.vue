@@ -15,13 +15,13 @@ const initialNavState = ref(true)
 const navbarClass = computed(() => {
     return {
         'fixed': showNavbar.value,
+        'relative': !showNavbar.value,
         'top-0': showNavbar.value,
         'bg-indigo-100/30': showNavbar.value,
         'opacity-100': initialNavState.value || showNavbar.value,
         'translate-y-0': initialNavState.value || showNavbar.value,
     }
 })
-
 
 
 const disableScroll = () => {
@@ -71,9 +71,9 @@ onUnmounted(() => {
 })
 </script>
 <template>
-    <div class="transition-all duration-1000 opacity-0  -translate-y-11 bg-indigo-100 border-b-2 main-site-padding  w-full"
+    <div class="transition-all duration-1000 opacity-0  -translate-y-11 bg-indigo-100 border-b-2 main-site-padding  w-full  z-10"
         :class="navbarClass">
-        <div class="flex justify-between items-center" :class="getInnerClass()">
+        <div class="flex justify-between items-center " :class="getInnerClass()">
 
             <div class="content-color ">abco</div>
 

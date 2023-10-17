@@ -27,6 +27,6 @@
 .swiper-wrapper {}
 
 .swiper {
-    z-index: -1;
+    /* z-index: -1; */
 }
 </style>
