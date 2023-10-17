@@ -12,9 +12,9 @@
             <SwiperSlide>
                 <LayoutCommonSliderOne />
             </SwiperSlide>
-            <!-- <SwiperSlide>
+            <SwiperSlide>
                 <LayoutCommonSliderTwo />
-            </SwiperSlide> -->
+            </SwiperSlide>
         </Swiper>
     </div>
 </template>
