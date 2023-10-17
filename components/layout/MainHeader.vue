@@ -141,7 +141,7 @@ onUnmounted(() => {
 .menuItem-enter-from,
 .menuItem-leave-to {
     opacity: 0;
-    transform: translateY(100px);
+    transform: translateY(50px);
 }
 </style>
  
