@@ -17,7 +17,7 @@ const navbarClass = computed(() => {
         'fixed': showNavbar.value,
         'relative': !showNavbar.value,
         'top-0': showNavbar.value,
-        'bg-indigo-100/30': showNavbar.value,
+        'bg-gray-50/70': showNavbar.value,
         'opacity-100': initialNavState.value || showNavbar.value,
         'translate-y-0': initialNavState.value || showNavbar.value,
     }
@@ -71,7 +71,7 @@ onUnmounted(() => {
 })
 </script>
 <template>
-    <div class="transition-all duration-1000 opacity-0  -translate-y-11 bg-indigo-100 border-b-2 main-site-padding  w-full  z-10"
+    <div class="transition-all duration-1000 opacity-0  -translate-y-11 bg-white border-b-2 main-site-padding  w-full z-10"
         :class="navbarClass">
         <div class="flex justify-between items-center " :class="getInnerClass()">
 
@@ -98,7 +98,7 @@ onUnmounted(() => {
 
 
                 <div class="h-full">
-                    <div class=" flex items-center cursor-pointer   border-red-500 h-full">AAAAAA</div>
+                    <div class=" flex items-center cursor-pointer   border-red-500 h-full">CONTACT</div>
                 </div>
 
             </div>
