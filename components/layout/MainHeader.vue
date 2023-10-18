@@ -17,7 +17,7 @@ const navbarClass = computed(() => {
         'fixed': showNavbar.value,
         'relative': !showNavbar.value,
         'top-0': showNavbar.value,
-        'bg-gray-50/70': showNavbar.value,
+        'bg-gray-50/80': showNavbar.value,
         'opacity-100': initialNavState.value || showNavbar.value,
         'translate-y-0': initialNavState.value || showNavbar.value,
     }
@@ -42,7 +42,7 @@ const closeCartDrawer = () => {
 }
 
 const getInnerClass = () => {
-    return showNavbar.value ? 'h-12' : 'h-20'
+    return showNavbar.value ? 'h-12' : 'h-16'
 }
 
 const showElement = (menu: string) => {
@@ -71,7 +71,7 @@ onUnmounted(() => {
 })
 </script>
 <template>
-    <div class="transition-all duration-1000 opacity-0  -translate-y-11 bg-white border-b-2 main-site-padding  w-full z-10"
+    <div class="transition-all duration-1000 opacity-0  -translate-y-11 bg-gray-50 border-b-2 main-site-padding  w-full z-10"
         :class="navbarClass">
         <div class="flex justify-between items-center " :class="getInnerClass()">
 
