@@ -73,7 +73,7 @@ onUnmounted(() => {
 <template>
     <div class="transition-all duration-1000 opacity-0  -translate-y-11 bg-gray-50 border-b-2 main-site-padding  w-full z-10"
         :class="navbarClass">
-        <div class="flex justify-between items-center " :class="getInnerClass()">
+        <div class="flex justify-between items-center text-sm font-medium" :class="getInnerClass()">
 
             <div class="content-color ">abco</div>
 

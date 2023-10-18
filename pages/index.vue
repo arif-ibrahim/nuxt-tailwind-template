@@ -1,10 +1,6 @@
 <template>
     <LayoutHomeBanner></LayoutHomeBanner>
-    <div class="main-site-padding mt-5">
-        <div class="grid grid-cols-4 gap-4 ">
-            <div v-for="i in 10" class="bg-slate-100 h-96"></div>
-        </div>
-    </div>
+    <LayoutNewArrivals></LayoutNewArrivals>
 </template>
 <script setup lang="ts">
 

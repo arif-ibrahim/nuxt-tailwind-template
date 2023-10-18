@@ -6,7 +6,7 @@
     <div>
         <Swiper :modules="[SwiperAutoplay, SwiperEffectFade]" :effect="'fade'" :crossFade="true" :slides-per-view="1"
             :grabCursor="true" :loop="true" :autoplay="{
-                delay: 3000,
+                delay: 6000,
                 disableOnInteraction: false,
             }">
             <SwiperSlide>
@@ -26,7 +26,5 @@
 
 .swiper-wrapper {}
 
-.swiper {
-    /* z-index: -1; */
-}
+.swiper {}
 </style>
