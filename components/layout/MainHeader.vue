@@ -1,14 +1,15 @@
 
 <script setup lang="ts">
 import { headerMenu } from '@/constant/header';
-import { computed, onMounted, onUnmounted, ref } from 'vue';
+import { computed, inject, onMounted, onUnmounted, ref } from 'vue';
 
+
+const isCartDrawerActive: any = inject('isCartDrawerActive')
 
 const showNavbar = ref(false)
 const scrollThreshold = ref(0)
 const initialThreshold = ref(40)
 const showMenu = ref('')
-const isOpenCartDrawer = ref(false)
 const initialNavState = ref(true)
 
 
@@ -33,12 +34,12 @@ const enableScroll = () => {
 
 const openCartDrawer = () => {
     disableScroll()
-    isOpenCartDrawer.value = true
+    isCartDrawerActive.value = true
 }
 
 const closeCartDrawer = () => {
     enableScroll()
-    isOpenCartDrawer.value = false
+    isCartDrawerActive.value = false
 }
 
 const getInnerClass = () => {
@@ -109,7 +110,7 @@ onUnmounted(() => {
         </div>
     </div>
     <Transition>
-        <SideDrawer v-if="isOpenCartDrawer" @close-overlay="closeCartDrawer"></SideDrawer>
+        <SideDrawer v-if="isCartDrawerActive" @close-overlay="closeCartDrawer"></SideDrawer>
     </Transition>
 </template>
 
