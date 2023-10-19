@@ -90,7 +90,10 @@ onUnmounted(() => {
             </div>
 
             <div class="flex">
-                <div @click="openCartDrawer" class="cursor-pointer">icon1</div>
+                <div @click="openCartDrawer" class="cursor-pointer text-lg font-medium">
+                    <Icon name="clarity:shopping-cart-line" />
+
+                </div>
             </div>
         </div>
     </div>
