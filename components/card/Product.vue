@@ -7,7 +7,7 @@
             </div> -->
         </div>
         <div class="flex gap-5 justify-center mb-3">
-            <UtilityIconRound icon="clarity:shopping-cart-line" @click="addToCart" />
+            <UtilityIconRound icon="clarity:shopping-cart-line" @click="openCartDrawer" />
             <UtilityIconRound icon="mdi:magnify" />
         </div>
     </div>
@@ -17,11 +17,7 @@
 import { inject } from "vue";
 
 
-const isCartDrawerActive: any = inject('isCartDrawerActive');
-
-const addToCart = () => {
-    isCartDrawerActive.value = true
-}
+const openCartDrawer: any = inject('openCartDrawer')
 
 </script>
 

@@ -5,11 +5,10 @@
 </template>
 
 <script setup lang="ts">
-import { provide, ref } from "vue";
 
-
-const isCartDrawerActive = ref(false)
-
-provide('isCartDrawerActive', isCartDrawerActive);
+const { isCartDrawerActive, openCartDrawer, closeCartDrawer } = useCartDrawer()
+provide('isCartDrawerActive', isCartDrawerActive)
+provide('openCartDrawer', openCartDrawer)
+provide('closeCartDrawer', closeCartDrawer)
 
 </script>

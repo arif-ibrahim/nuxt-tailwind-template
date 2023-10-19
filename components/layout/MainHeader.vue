@@ -1,10 +1,11 @@
-
 <script setup lang="ts">
 import { headerMenu } from '@/constant/header';
 import { computed, inject, onMounted, onUnmounted, ref } from 'vue';
 
 
 const isCartDrawerActive: any = inject('isCartDrawerActive')
+const openCartDrawer: any = inject('openCartDrawer')
+const closeCartDrawer: any = inject('closeCartDrawer')
 
 const showNavbar = ref(false)
 const scrollThreshold = ref(0)
@@ -25,22 +26,6 @@ const navbarClass = computed(() => {
 })
 
 
-const disableScroll = () => {
-    document.body.style.overflow = "hidden";
-}
-const enableScroll = () => {
-    document.body.style.overflow = "auto";
-}
-
-const openCartDrawer = () => {
-    disableScroll()
-    isCartDrawerActive.value = true
-}
-
-const closeCartDrawer = () => {
-    enableScroll()
-    isCartDrawerActive.value = false
-}
 
 const getInnerClass = () => {
     return showNavbar.value ? 'h-12' : 'h-16'
