@@ -33,16 +33,38 @@ const emit = defineEmits(['closeOverlay'])
                             </ul>
                         </div>
                     </div>
-                    <div class="mt-5">
-                        <div class="flex justify-between text-center gap-2 text-gray-700 text-lg">
-                            <div class="bg-gray-100 w-full py-2 cursor-pointer ">
-                                <Icon name="icon-park-outline:notes" />
+                    <div>
+                        <div class="mt-5">
+                            <div class="flex justify-between text-center gap-2 text-gray-700 text-lg">
+                                <div class="bg-gray-100 w-full py-2 cursor-pointer ">
+                                    <Icon name="icon-park-outline:notes" />
+                                </div>
+                                <div class="bg-gray-100 w-full py-2 cursor-pointer">
+                                    <Icon name="icon-park-outline:tag-one" />
+                                </div>
+                                <div class="bg-gray-100 w-full py-2 cursor-pointer">
+                                    <Icon name="icon-park-outline:gift" />
+                                </div>
                             </div>
-                            <div class="bg-gray-100 w-full py-2 cursor-pointer">
-                                <Icon name="icon-park-outline:tag-one" />
+                        </div>
+                        <div class="my-2">
+                            <hr />
+                        </div>
+                        <div class="flex flex-col gap-3">
+                            <div class="flex justify-between font-bold">
+                                <div>Total</div>
+                                <div>900.00 Taka</div>
                             </div>
-                            <div class="bg-gray-100 w-full py-2 cursor-pointer">
-                                <Icon name="icon-park-outline:gift" />
+                            <div class="text-xs">Taxes and shipping calculated at checkout</div>
+                            <div>
+                                <button class="bg-black hover:bg-fuchsia-600 text-white text-sm p-2 w-full rounded">PROCEED
+                                    TO
+                                    CHECKOUT</button>
+                            </div>
+                            <div>
+                                <button
+                                    class="bg-white hover:bg-black hover:text-white text-sm p-2 w-full border border-black border-1 rounded">VIEW
+                                    CART</button>
                             </div>
                         </div>
                     </div>
