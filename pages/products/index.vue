@@ -10,7 +10,7 @@ const setThumbsSwiper = (swiper) => {
 <template>
     <div class="main-site-padding">
         <div class="flex mt-20">
-            <div class="w-1/2 h-[500px]">
+            <div class="w-1/2 h-[700px]">
                 <Swiper :style="{
                     '--swiper-navigation-color': '#fff',
                     '--swiper-pagination-color': '#fff',
@@ -22,19 +22,31 @@ const setThumbsSwiper = (swiper) => {
 
                     }">
                     <SwiperSlide>
-                        <img src="/bag.webp" />
+                        <img class="" src="/bag.webp" />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img src="/bag3.webp" />
+                        <img class="" src="/bag3.webp" />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <img class="" src="/bag_3.webp" />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <img class="" src="/bag_5.webp" />
                     </SwiperSlide>
                 </Swiper>
                 <Swiper @swiper="setThumbsSwiper" :modules="[SwiperFreeMode, SwiperNavigation, SwiperThumbs]" :loop="true"
                     :spaceBetween="10" :slidesPerView="5" :freeMode="true" :watchSlidesProgress="true" class="mySwiper">
                     <SwiperSlide>
-                        <img src="/bag.webp" />
+                        <img class="" src="/bag.webp" />
                     </SwiperSlide>
                     <SwiperSlide>
-                        <img src="/bag3.webp" />
+                        <img class="" src="/bag3.webp" />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <img class="" src="/bag_3.webp" />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <img class="" src="/bag_5.webp" />
                     </SwiperSlide>
                 </Swiper>
             </div>
@@ -55,6 +67,8 @@ const setThumbsSwiper = (swiper) => {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
+
 }
 
 .mySwiper2 {
