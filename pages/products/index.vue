@@ -12,7 +12,10 @@ const setThumbsSwiper = (swiper) => {
     <div class="main-site-padding">
         <div class="flex mt-20">
             <div class="w-1/2 h-[500px]">
-                <Swiper :modules="[SwiperFreeMode, SwiperNavigation, SwiperThumbs]" :loop="true" :navigation="true"
+                <Swiper :style="{
+                    '--swiper-navigation-color': '#fff',
+                    '--swiper-pagination-color': '#fff',
+                }" :modules="[SwiperFreeMode, SwiperNavigation, SwiperThumbs]" :loop="true" :navigation="true"
                     class="mySwiper2" :thumbs="{
                         swiper: thumbsSwiper,
                         autoScrollOffset: 0,
@@ -78,12 +81,12 @@ const setThumbsSwiper = (swiper) => {
 }
 
 .mySwiper2 {
-    height: 90%;
+    height: 80%;
     width: 100%;
 }
 
 .mySwiper {
-    height: 10%;
+    height: 20%;
     box-sizing: border-box;
     padding: 10px 0;
 }
