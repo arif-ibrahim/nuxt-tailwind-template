@@ -3,7 +3,6 @@ import { ref } from "vue";
 const thumbsSwiper = ref(null);
 
 const setThumbsSwiper = (swiper) => {
-    console.log(swiper);
     thumbsSwiper.value = swiper;
 };
 </script>
@@ -50,34 +49,12 @@ const setThumbsSwiper = (swiper) => {
 
 
 <style scoped>
-.swiper {
-    width: 100%;
-    height: 100%;
-}
-
-.swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    background: #fff;
-
-    /* Center slide text vertically */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+.swiper {}
 
 .swiper-slide img {
-    display: block;
     width: 100%;
     height: 100%;
     object-fit: cover;
-}
-
-
-
-.swiper-slide {
-    background-size: cover;
-    background-position: center;
 }
 
 .mySwiper2 {
@@ -87,7 +64,6 @@ const setThumbsSwiper = (swiper) => {
 
 .mySwiper {
     height: 20%;
-    box-sizing: border-box;
     padding: 10px 0;
 }
 
@@ -99,12 +75,5 @@ const setThumbsSwiper = (swiper) => {
 
 .mySwiper .swiper-slide-thumb-active {
     opacity: 1;
-}
-
-.swiper-slide img {
-    display: block;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
 }
 </style>
