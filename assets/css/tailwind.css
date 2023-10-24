@@ -4,6 +4,36 @@
 
 @layer utilities {
   .main-site-padding {
-    padding: 0 200px
+    padding: 0 20px
+  }
+
+  @screen sm {
+    .main-site-padding {
+      padding: 0 50px;
+    }
+  }
+
+  @screen md {
+    .main-site-padding {
+      padding: 0 70px;
+    }
+  }
+
+  @screen lg {
+    .main-site-padding {
+      padding: 0 100px;
+    }
+  }
+
+  @screen xl {
+    .main-site-padding {
+      padding: 0 150px;
+    }
+  }
+
+  @screen 2xl {
+    .main-site-padding {
+      padding: 0 200px;
+    }
   }
 }
