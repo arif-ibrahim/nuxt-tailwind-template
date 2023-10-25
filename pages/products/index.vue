@@ -50,7 +50,9 @@ const setThumbsSwiper = (swiper) => {
                     </SwiperSlide>
                 </Swiper>
             </div>
-            <div class="w-1/2">details</div>
+            <div class="w-1/2">
+
+            </div>
         </div>
         <div class="mt-20">
             specification
