@@ -10,17 +10,9 @@
                 <div>Size: M</div>
             </div>
             <div class="text-xs mt-1">$280</div>
-            <div class="flex gap-5 text-gray-600 text-sm mt-1">
-                <div class="border rounded-sm">
-                    <button class="border-r h-6 w-6 align-text-bottom">
-                        <Icon name="icon-park-outline:plus" />
-                    </button>
-                    <input class="w-6 h-6 text-center align-text-bottom" type="text" value="2">
-                    <button class="border-l w-6 h-6 align-text-bottom">
-                        <Icon name="icon-park-outline:minus" />
-                    </button>
-                </div>
-                <div class="cursor-pointer">
+            <div class="flex gap-5  mt-1">
+                <Quantity />
+                <div class="cursor-pointer text-gray-600 text-sm">
                     <Icon name="icon-park-outline:delete" />
                 </div>
             </div>
