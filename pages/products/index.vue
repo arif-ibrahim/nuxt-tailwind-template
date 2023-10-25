@@ -59,7 +59,7 @@ const setThumbsSwiper = (swiper: any) => {
                 <div class="text-sm font-medium">In stock - ready to ship</div>
                 <div>
                     <div class="text-sm text-gray-600 font-semibold mb-1">Size: M</div>
-                    <div class="flex gap-2 text-sm">
+                    <div class="flex gap-4 text-sm">
                         <div class="border bg-black text-white border-black w-9 py-2 text-center">S</div>
                         <div class=" border border-black w-9 py-2 text-center">M</div>
                         <div class="border border-black w-9 py-2 text-center">L</div>
@@ -83,8 +83,30 @@ const setThumbsSwiper = (swiper: any) => {
                 </div>
             </div>
         </div>
-        <div class="mt-20">
-            specification
+        <div class="my-20">
+            <div class="flex gap-7 border-b font-medium text-gray-600">
+                <div class=" pt-1 pb-2 cursor-pointer border-b-2 border-black">Product Description</div>
+                <div class="pt-1 pb-2 cursor-pointer">Shipping & Returns</div>
+            </div>
+            <div class="mt-5">
+                <div class="text-xs">
+                    Sneakers are a perfect blend of utility and comfort, and they can uplift the wearer’s ensemble
+                    instantly. Regardless of the outfit you choose to wear, the classy pair of cleats are a must-have in any
+                    fashion lover’s closet. You can team up the eye-catching footwear with a printed T shirt and mid-rise
+                    jeans for a laidback appearance.
+                </div>
+                <div class="mt-3">
+                    <div class="text-xl">Features</div>
+                    <ul class="text-xs list-disc mt-3 space-y-1 ms-4">
+                        <li>100% Original Products</li>
+                        <li>Wipe with a clean, dry cloth to remove the dust</li>
+                        <li>Shoe Width: Medium</li>
+                        <li>Anti-slip TPU Rubber Sole</li>
+                        <li>70% cotton, 30% polyester.</li>
+                        <li>Easy to wear and versatile as Casual.</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 </template>
