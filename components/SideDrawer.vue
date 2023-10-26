@@ -63,9 +63,11 @@ const emit = defineEmits(['closeOverlay'])
                                     CHECKOUT</button>
                             </div>
                             <div>
-                                <button
-                                    class="bg-white hover:bg-black hover:text-white text-sm p-2 w-full border border-black border-1 rounded">VIEW
-                                    CART</button>
+                                <NuxtLink to="/cart">
+                                    <button @click="emit('closeOverlay')"
+                                        class="bg-white hover:bg-black hover:text-white text-sm p-2 w-full border border-black border-1 rounded">VIEW
+                                        CART</button>
+                                </NuxtLink>
                             </div>
                         </div>
                     </div>
