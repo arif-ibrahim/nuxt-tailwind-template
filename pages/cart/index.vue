@@ -4,7 +4,7 @@
         <div class="flex flex-col lg:flex-row gap-7 mt-10">
             <div class="lg:w-9/12">
                 <table class="w-full table-auto text-left ">
-                    <thead class="bg-gray-100">
+                    <thead class="bg-gray-100 hidden sm:table-header-group">
                         <tr class="text-gray-500 font-mono text-lg tracking-wider ">
                             <th colspan="2">Product</th>
                             <th>Quantity</th>
@@ -16,19 +16,20 @@
                             <td class="w-28">
                                 <img class="h-32" src="/bag_5.webp" alt="">
                             </td>
-                            <td>
+                            <td class="flex sm:table-cell">
                                 <div>
-                                    <div>leather bag with chain</div>
-                                    <div>2000Taka</div>
-                                    <div>Size: M </div>
+                                    <div class="text-sm sm:text-base">leather bag with chain</div>
+                                    <div class="hidden sm:block text-xs sm:text-base text-gray-500">2000Taka</div>
+                                    <div class="text-xs sm:text-base text-gray-500">Color: Orange </div>
+                                    <div class="text-xs sm:text-base text-gray-500">Size: M </div>
                                 </div>
                             </td>
-                            <td>
+                            <td class="flex sm:table-cell">
                                 <div class="flex">
                                     <Quantity></Quantity>
                                 </div>
                             </td>
-                            <td>5000Taka</td>
+                            <td class="text-sm sm:text-base font-medium">5000Taka</td>
                         </tr>
 
                     </tbody>
