@@ -19,9 +19,28 @@
                             <td class="flex sm:table-cell">
                                 <div>
                                     <div class="text-sm sm:text-base">leather bag with chain</div>
-                                    <div class="hidden sm:block text-xs sm:text-base text-gray-500">2000Taka</div>
-                                    <div class="text-xs sm:text-base text-gray-500">Color: Orange </div>
-                                    <div class="text-xs sm:text-base text-gray-500">Size: M </div>
+                                    <div class="hidden sm:block text-xs sm:text-sm text-gray-500">2000Taka</div>
+                                    <div class="text-xs sm:text-sm text-gray-500">Color: Orange </div>
+                                    <div class="text-xs sm:text-sm text-gray-500">Size: M </div>
+                                </div>
+                            </td>
+                            <td class="flex sm:table-cell">
+                                <div class="flex">
+                                    <Quantity></Quantity>
+                                </div>
+                            </td>
+                            <td class="text-sm sm:text-base font-medium">5000Taka</td>
+                        </tr>
+                        <tr>
+                            <td class="w-28">
+                                <img class="h-32" src="/bag_5.webp" alt="">
+                            </td>
+                            <td class="flex sm:table-cell">
+                                <div>
+                                    <div class="text-sm sm:text-base">leather bag with chain</div>
+                                    <div class="hidden sm:block text-xs sm:text-sm text-gray-500">2000Taka</div>
+                                    <div class="text-xs sm:text-sm text-gray-500">Color: Orange </div>
+                                    <div class="text-xs sm:text-sm text-gray-500">Size: M </div>
                                 </div>
                             </td>
                             <td class="flex sm:table-cell">
