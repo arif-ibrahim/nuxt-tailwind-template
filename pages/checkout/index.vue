@@ -39,15 +39,15 @@
                     <div class="font-medium text-sm">12300 Taka </div>
                 </div>
                 <div class="flex flex-col gap-1">
-                    <div class="flex justify-between text-sm">
-                        <div>Subtotal</div>
+                    <div class="flex justify-between text-sm text-gray-500">
+                        <div class="">Subtotal</div>
                         <div class="font-bold">600 Taka</div>
                     </div>
-                    <div class="flex justify-between text-sm">
+                    <div class="flex justify-between text-sm text-gray-500">
                         <div>Shipping</div>
                         <div class="font-semibold">60 Taka</div>
                     </div>
-                    <div class="flex justify-between text-sm">
+                    <div class="flex justify-between text-sm text-gray-500">
                         <div>Coupon</div>
                         <div class="font-semibold">60 Taka</div>
                     </div>
@@ -55,6 +55,11 @@
                         <div>Total</div>
                         <div>720 Taka</div>
                     </div>
+                </div>
+                <div>
+                    <button class="bg-green-500 hover:bg-green-600 text-white text-sm p-2 w-full rounded">PLACE
+                        ORDER</button>
+
                 </div>
             </div>
         </div>
