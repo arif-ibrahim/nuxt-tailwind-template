@@ -70,8 +70,10 @@
                     <div>12300 TAKA</div>
                 </div>
                 <div>
-                    <button class="bg-black hover:bg-fuchsia-600 text-white text-sm p-2 w-full rounded">PROCEED TO
-                        CHECKOUT</button>
+                    <NuxtLink to="/checkout">
+                        <button class="bg-black hover:bg-fuchsia-600 text-white text-sm p-2 w-full rounded">PROCEED TO
+                            CHECKOUT</button>
+                    </NuxtLink>
                 </div>
             </div>
         </div>
