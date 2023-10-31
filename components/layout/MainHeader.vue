@@ -61,7 +61,9 @@ onUnmounted(() => {
         :class="navbarClass">
         <div class="flex justify-between items-center text-sm font-medium" :class="getInnerClass()">
 
-            <div class="content-color ">abco</div>
+            <div class="content-color ">
+                <NuxtLink to="/">abc</NuxtLink>
+            </div>
 
             <div class="flex gap-3 relative h-full">
 
