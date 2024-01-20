@@ -16,7 +16,7 @@ import { computed } from "vue";
 
 
 interface Props {
-    size: string
+    size?: string
 }
 
 const props = withDefaults(defineProps<Props>(), {
