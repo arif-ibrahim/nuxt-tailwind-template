@@ -117,7 +117,7 @@ onUnmounted(() => {
 .v-enter-from,
 .v-leave-to {
     opacity: 0;
-    transform: translateX(500px);
+    transform: translateX(0px);
 }
 
 
